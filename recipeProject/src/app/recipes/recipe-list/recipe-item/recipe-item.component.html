@@ -1,0 +1,11 @@
+<div class="list-group col-xs-12 pt-3">
+    <a href="#" class="list-group-item" (click)="onSelected()">
+        <div class="float-start">
+            <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+            <p class="list-group-item-text">{{recipe.description}}</p>
+        </div>
+        <span class="float-end pt-2">
+            <img src="{{recipe.imagePath}}" alt="{{recipe.name}}" class="img-fluid" style="max-height: 50px;">
+        </span>
+    </a>
+</div>

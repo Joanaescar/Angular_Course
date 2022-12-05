@@ -1,0 +1,7 @@
+<app-game-control (onTick)="onTick($event)"></app-game-control>
+<ul>
+    <li *ngFor="let number of arrayNumbers">
+        <app-even *ngIf="number % 2 === 0">{{number}}</app-even>
+        <app-odd [number]="number" *ngIf="number % 2 !== 0"></app-odd>
+    </li>
+</ul>
