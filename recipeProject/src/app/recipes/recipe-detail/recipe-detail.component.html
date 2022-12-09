@@ -10,14 +10,17 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle">Manage Recipe</button>
+        <div ngbDropdown class="dropdown">
+            <button ngbDropdownToggle type="button" class="btn btn-primary" aria-expanded="false"
+                id="dropdownMenuButton1">Manage
+                Recipe</button>
+
+            <ul ngbDropdownMenu aria-labelledby="dropdownMenuButton1">
+                <li><a ngbDropdownItem href="#">To Shopping List</a></li>
+                <li><a ngbDropdownItem href="#">Edit Recipe</a></li>
+                <li><a ngbDropdownItem href="#">Delete Recipe</a></li>
+            </ul>
         </div>
-        <ul class="dropdown-menu">
-            <li><a href="#">To Shopping List</a></li>
-            <li><a href="#">Edit Recipe</a></li>
-            <li><a href="#">Delete Recipe</a></li>
-        </ul>
     </div>
 </div>
 <div class="row">
