@@ -5,13 +5,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ActiveUsersComponent } from './active-users/active-users.component';
-import { InativeUsersComponent } from './inative-users/inative-users.component';
+import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActiveUsersComponent,
-    InativeUsersComponent
+    InactiveUsersComponent
   ],
   imports: [
     BrowserModule,
