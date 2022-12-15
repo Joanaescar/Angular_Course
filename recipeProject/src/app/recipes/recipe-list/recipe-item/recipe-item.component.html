@@ -1,5 +1,5 @@
 <div class="list-group col-xs-12 pt-3">
-    <a href="#" class="list-group-item" (click)="onSelected()">
+    <a style="cursor: pointer;" class="list-group-item" [routerLink]="[index]" routerLinkActive="active">
         <div class="float-start">
             <h4 class="list-group-item-heading">{{recipe.name}}</h4>
             <p class="list-group-item-text">{{recipe.description}}</p>
