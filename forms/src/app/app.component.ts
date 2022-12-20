@@ -11,9 +11,31 @@ export class AppComponent {
   defaultQuestion: string = 'pet';
   answer: string = ''
   genders: string[] = ['male', 'female'];
+  user = {
+    username: '',
+    email: '',
+    secretQuestion: '',
+    answer: '',
+    gender: ''
+  };
+  submitted: boolean = false;
 
   suggestUserName() {
     const suggestedName = 'Superuser';
+    /*     this.signupForm.setValue({
+          userData: {
+            username: suggestedName,
+            email: ''
+          },
+          secret: 'pet',
+          questionAnswer: '',
+          gender: 'male'
+        }); */
+    this.signupForm.form.patchValue({
+      userData: {
+        username: suggestedName
+      }
+    });
   }
 
   /*   onSubmit(form: NgForm) {
@@ -22,7 +44,13 @@ export class AppComponent {
     } */
 
   onSubmit() {
-    console.log(this.signupForm);
+    this.submitted = true;
+    this.user.username = this.signupForm.form.value.userData.username;
+    this.user.email = this.signupForm.form.value.userData.email;
+    this.user.secretQuestion = this.signupForm.form.value.secret;
+    this.user.answer = this.signupForm.form.value.questionAnswer;
+    this.user.gender = this.signupForm.form.value.gender;
 
+    this.signupForm.reset()
   }
 }
